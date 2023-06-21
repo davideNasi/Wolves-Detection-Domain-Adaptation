@@ -168,6 +168,11 @@ DATASETS = {
         'split': 'train'
     },
 
+    'wolves_park2_day': {
+        'root': '/wolves/park2_day',
+        'split': 'train'
+    },
+
     'wolves_park2_test': {
         'root': '/wolves/park2_test',
         'split': 'test'
