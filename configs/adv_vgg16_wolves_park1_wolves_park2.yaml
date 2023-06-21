@@ -46,4 +46,4 @@ SOLVER:
 TEST:
   EVAL_TYPES: ['voc']
 
-WORK_DIR: '/home/aquattrini/logs'
+WORK_DIR: '/logs'

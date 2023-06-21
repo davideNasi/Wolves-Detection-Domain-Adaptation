@@ -159,22 +159,22 @@ DATASETS = {
 
     # -----------wolves----------
     'wolves_park1': {
-        'root': '/home/head-scan/Desktop/wolves-data/wolves/park1',
+        'root': '/wolves/park1',
         'split': 'train'
     },
 
     'wolves_park2': {
-        'root': '/home/head-scan/Desktop/wolves-data/wolves/park2',
+        'root': '/wolves/park2',
         'split': 'train'
     },
 
     'wolves_park2_test': {
-        'root': '/home/head-scan/Desktop/wolves-data/wolves/park2_test',
+        'root': '/wolves/park2_test',
         'split': 'test'
     },
 
     'wolves_park3': {
-        'root': '/home/head-scan/Desktop/wolves-data/wolves/park3',
+        'root': '/wolves/park3',
         'split': 'test'
     }
 
