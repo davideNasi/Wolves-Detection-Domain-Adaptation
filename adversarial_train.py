@@ -176,7 +176,7 @@ def main(cfg, args):
 
     work_dir = cfg.WORK_DIR
     if args.test_only:
-        evaluation(model, test_loaders, device, types=cfg.TEST.EVAL_TYPES, output_dir=work_dir)
+        evaluation(model, test_loaders, device, types=cfg.TEST.EVAL_TYPES, output_dir=work_dir, viz=True)
         return
 
     losses_writer = None

@@ -89,10 +89,11 @@ def do_evaluation(model, data_loader, device, types, output_dir, iteration=None,
     header = 'Testing {}:'.format(dataset.dataset_name)
     results_dict = {}
     has_mask = False
+    my_counter=0
     for images, img_metas, targets in metric_logger.log_every(data_loader, 10, header):
         assert len(targets) == 1
+        my_counter += 1
         images = images.to(device)
-
         model_time = time.time()
         det = model(images, img_metas)[0]
         boxes, scores, labels = det['boxes'], det['scores'], det['labels']
@@ -106,7 +107,7 @@ def do_evaluation(model, data_loader, device, types, output_dir, iteration=None,
         if viz:
             import matplotlib.pyplot as plt
             import matplotlib.patches as patches
-            plt.switch_backend('TKAgg')
+            plt.switch_backend('Agg')
             image = de_normalize(images[0], img_meta)
             plt.subplot(122)
             plt.imshow(image)
@@ -126,7 +127,7 @@ def do_evaluation(model, data_loader, device, types, output_dir, iteration=None,
                 rect = patches.Rectangle((x1, y1), x2 - x1, y2 - y1, facecolor='none', edgecolor='g')
                 plt.text(x1, y1, '{}'.format(dataset.CLASSES[category_id]))
                 plt.gca().add_patch(rect)
-            plt.show()
+            plt.savefig("/logs/"+str(my_counter)+".jpg")
 
         boxes /= scale_factor
         result = {}
