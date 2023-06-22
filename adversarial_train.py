@@ -243,7 +243,8 @@ def main(cfg, args):
 
         save_func()
 
-        if epoch == (epochs - 1):
+        #if epoch == (epochs - 1):
+        if True:
             test_func()
 
         epoch_cost = time.time() - epoch_start
