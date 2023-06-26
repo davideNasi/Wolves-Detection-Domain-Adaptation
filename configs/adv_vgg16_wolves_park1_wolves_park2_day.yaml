@@ -19,7 +19,7 @@ ADV:
 DATASETS:
   TRAINS: ['wolves_park1']
   TARGETS: ['wolves_park2_day']
-  TESTS: ['wolves_park2_test']
+  TESTS: ['wolves_park2_day_test']
 INPUT:
   TRANSFORMS_TRAIN:
     - name: 'random_flip'
