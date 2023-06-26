@@ -1,0 +1,1 @@
+python3 Wolves-Detection-Domain-Adaptation/adversarial_train.py --config-file Wolves-Detection-Domain-Adaptation/configs/adv_vgg16_wolves_park1_wolves_park2.yaml

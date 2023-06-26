@@ -8,5 +8,6 @@ RUN pip install opencv-python terminaltables Pillow yacs pycocotools tensorboard
 RUN apt install git -y
 ARG CACHEBUST=7
 RUN git clone https://github.com/davideNasi/Wolves-Detection-Domain-Adaptation.git
-
+WORKDIR /Wolves-Detection-Domain-Adaptation
 RUN apt-get update && apt-get install nano
+CMD ["bash","train_adv.sh"]
