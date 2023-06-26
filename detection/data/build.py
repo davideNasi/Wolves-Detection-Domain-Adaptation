@@ -179,7 +179,7 @@ DATASETS = {
     },
 
     'wolves_park2_day_test': {
-        'root': '/wolves/park2_test',
+        'root': '/wolves/park2_day_test',
         'split': 'test'
     },
 
