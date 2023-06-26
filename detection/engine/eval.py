@@ -113,7 +113,7 @@ def do_evaluation(model, data_loader, device, types, output_dir, iteration=None,
             plt.imshow(image)
             plt.title('Predict')
             for i, ((x1, y1, x2, y2), label) in enumerate(zip(boxes.tolist(), labels.tolist())):
-                if scores[i] > 0.65:
+                if scores[i] > 0.85:
                     rect = patches.Rectangle((x1, y1), x2 - x1, y2 - y1, facecolor='none', edgecolor='g')
                     category_id = dataset.label2cat[label]
                     plt.text(x1, y1, '{}:{:.2f}'.format(dataset.CLASSES[category_id], scores[i]), color='r')
