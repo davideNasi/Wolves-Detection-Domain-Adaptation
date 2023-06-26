@@ -63,9 +63,9 @@ class Wolves(VOCDataset):
         if train:
             img_ids = []
             origin_size = len(self.ids)
-            # for img_id in self.ids:
-            #     ann = self.get_annotations_by_image_id(img_id)
-            #     if ann['boxes'].shape[0] > 0:
-            #         img_ids.append(img_id)
+            for img_id in self.ids:
+                ann = self.get_annotations_by_image_id(img_id)
+                if ann['boxes'].shape[0] > 0:
+                    img_ids.append(img_id)
             self.ids = img_ids
             print('({})Only images containing gts are kept, from {} to {}'.format(self.dataset_name, origin_size, len(self.ids)))
