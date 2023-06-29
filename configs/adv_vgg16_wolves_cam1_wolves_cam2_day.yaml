@@ -17,9 +17,9 @@ ADV:
       window_strides: [2, 2, 2, 2, 2, 2, 2]
       window_sizes: [3, 9, 15, 21, 27, 33, 37]
 DATASETS:
-  TRAINS: ['park1_camera1']
-  TARGETS: ['park2_camera2']
-  TESTS: ['park2_camera2']
+  TRAINS: ['wolves_park1_camera1']
+  TARGETS: ['wolves_park1_camera2']
+  TESTS: ['wolves_park1_camera2']
 INPUT:
   TRANSFORMS_TRAIN:
     - name: 'random_flip'
@@ -42,7 +42,7 @@ SOLVER:
   EPOCHS: 25
   STEPS: (16, 22)
   LR: 1e-5
-  BATCH_SIZE: 8
+  BATCH_SIZE: 3
 TEST:
   EVAL_TYPES: ['voc']
 
