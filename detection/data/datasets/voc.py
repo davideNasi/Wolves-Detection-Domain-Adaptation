@@ -58,7 +58,7 @@ class Wolves(VOCDataset):
     CLASSES = ('__background__', 'w')
 
     def __init__(self, train, **kwargs):
-        print (f"{self.CLASSES}")
+        print(f"{self.CLASSES}")
         super().__init__(keep_difficult=not train, img_ext='.jpg', **kwargs)
         if train:
             img_ids = []

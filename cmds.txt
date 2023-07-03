@@ -1,5 +1,5 @@
 python3 adversarial_train.py --config-file configs/adv_vgg16_wolves_park1_wolves_park2.yaml
-
+bash
 python3 adversarial_train.py --config-file configs/adv_vgg16_wolves_park1_wolves_park2_day.yaml --resume /logs/model_epoch_06.pth --test-only
 
 nohup docker run --gpus all --ipc=host -v ~/da/tia/wolves:/wolves -v ~/da/Wolves-Detection-Domain-Adaptation/logs:/logs wdda &
