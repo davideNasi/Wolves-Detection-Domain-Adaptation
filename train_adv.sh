@@ -1,1 +1,1 @@
-python3 adversarial_train.py --config-file configs/adv_vgg16_wolves_cam1_wolves_cam2_day.yaml
+python3 adversarial_train.py --config-file configs/adv_vgg16_wolves_park2_day_park2_night.yaml

@@ -190,7 +190,14 @@ DATASETS = {
         'root': '/wolves/park2_day_test',
         'split': 'test'
     },
-
+    'wolves_park2_night_test': {
+        'root': '/wolves/park2_night_test',
+        'split': 'test'
+    },
+    'wolves_park2_night': {
+        'root': '/wolves/park2_night',
+        'split': 'test'
+    },
     'wolves_park3': {
         'root': '/wolves/park3',
         'split': 'test'
