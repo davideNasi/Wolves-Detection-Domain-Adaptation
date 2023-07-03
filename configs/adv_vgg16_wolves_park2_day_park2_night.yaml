@@ -39,7 +39,7 @@ INPUT:
       to_01: True
     - name: 'collect'
 SOLVER:
-  EPOCHS: 25
+  EPOCHS: 200
   STEPS: (16, 22)
   LR: 1e-5
   BATCH_SIZE: 8
