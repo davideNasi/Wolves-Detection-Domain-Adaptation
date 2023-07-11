@@ -241,8 +241,9 @@ def main(cfg, args):
         for scheduler in schedulers:
             scheduler.step()
 
-        if epoch-1 % 20 == 0:
-            save_func()
+        # if epoch-1 % 20 == 0:
+        #     save_func()
+        save_func()
 
         #if epoch == (epochs - 1):
         if True:

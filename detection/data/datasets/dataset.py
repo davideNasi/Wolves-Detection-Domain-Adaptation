@@ -197,12 +197,21 @@ class VOCDataset(ABSDataset):
                 label_name = obj['name']
                 if label_name not in self.CLASSES:
                     continue
-                difficult.append(is_difficult)
+
                 label_id = self.CLASSES.index(label_name)
                 box = obj['bndbox']
                 box = list(map(lambda x: float(x) - 1, [box['xmin'], box['ymin'], box['xmax'], box['ymax']]))
-                boxes.append(box)
-                labels.append(label_id)
+
+                # boxes.append(box)
+                # labels.append(label_id)
+                # difficult.append(is_difficult)
+
+                area = (box[2] - box[0])*(box[3] - box[1])
+                if area > 1024:
+                    boxes.append(box)
+                    labels.append(label_id)
+                    difficult.append(is_difficult)
+
         boxes = np.array(boxes).reshape((-1, 4))
         labels = np.array(labels)
         difficult = np.array(difficult)

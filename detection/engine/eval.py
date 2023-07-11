@@ -120,7 +120,7 @@ def do_evaluation(model, data_loader, device, types, output_dir, iteration=None,
                     plt.gca().add_patch(rect)
                     # save prediction txt results
                     f = open("/logs/predictions/" + img_info["id"] + ".txt", 'a+')
-                    line = "wolf {0:.2f} {1:.0f} {2:.0f} {3:.0f}".format(scores[i], x1, y1, x2, y2)
+                    line = "wolf {0:.2f} {1:.0f} {2:.0f} {3:.0f} {4:.0f}\n".format(scores[i], x1/scale_factor, y1/scale_factor, x2/scale_factor, y2/scale_factor)
                     f.write(line)
                     f.close()
 
