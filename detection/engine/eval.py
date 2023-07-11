@@ -118,6 +118,11 @@ def do_evaluation(model, data_loader, device, types, output_dir, iteration=None,
                     category_id = dataset.label2cat[label]
                     plt.text(x1, y1, '{}:{:.2f}'.format(dataset.CLASSES[category_id], scores[i]), color='r')
                     plt.gca().add_patch(rect)
+                    # save prediction txt results
+                    f = open("/logs/predictions/" + img_info["id"] + ".txt", 'a+')
+                    line = "wolf {0:.2f} {1:.0f} {2:.0f} {3:.0f}".format(scores[i], x1, y1, x2, y2)
+                    f.write(line)
+                    f.close()
 
             plt.subplot(121)
             plt.imshow(image)
@@ -127,7 +132,7 @@ def do_evaluation(model, data_loader, device, types, output_dir, iteration=None,
                 rect = patches.Rectangle((x1, y1), x2 - x1, y2 - y1, facecolor='none', edgecolor='g')
                 plt.text(x1, y1, '{}'.format(dataset.CLASSES[category_id]))
                 plt.gca().add_patch(rect)
-            plt.savefig("/logs/"+str(my_counter)+".jpg")
+            plt.savefig("/logs/images/"+str(my_counter)+".jpg")
 
         boxes /= scale_factor
         result = {}
