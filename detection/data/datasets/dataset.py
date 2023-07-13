@@ -202,15 +202,15 @@ class VOCDataset(ABSDataset):
                 box = obj['bndbox']
                 box = list(map(lambda x: float(x) - 1, [box['xmin'], box['ymin'], box['xmax'], box['ymax']]))
 
-                # boxes.append(box)
-                # labels.append(label_id)
-                # difficult.append(is_difficult)
+                boxes.append(box)
+                labels.append(label_id)
+                difficult.append(is_difficult)
 
-                area = (box[2] - box[0])*(box[3] - box[1])
-                if area > 1024:
-                    boxes.append(box)
-                    labels.append(label_id)
-                    difficult.append(is_difficult)
+                # area = (box[2] - box[0])*(box[3] - box[1])
+                # if area > 1024:
+                #     boxes.append(box)
+                #     labels.append(label_id)
+                #     difficult.append(is_difficult)
 
         boxes = np.array(boxes).reshape((-1, 4))
         labels = np.array(labels)

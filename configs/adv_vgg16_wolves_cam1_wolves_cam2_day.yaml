@@ -42,7 +42,7 @@ SOLVER:
   EPOCHS: 25
   STEPS: (16, 22)
   LR: 1e-5
-  BATCH_SIZE: 2
+  BATCH_SIZE: 3
 TEST:
   EVAL_TYPES: ['voc']
 
